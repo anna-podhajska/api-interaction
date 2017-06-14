@@ -11,6 +11,7 @@ $(document).ready(function() {
     //  random background color:
      var newColor = pickRandomColor();
      $("body").css("background-color",newColor);
+      $(".pSource").css("color",newColor);
     // -------
     });
 });
