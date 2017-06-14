@@ -13,6 +13,10 @@ $(document).ready(function() {
      $("body").css("background-color",newColor);
       $(".pSource").css("color",newColor);
     // -------
+
+    // update quote to twitter button like: "<quote>"<line feed>"<translation>"
+    $(".buttonActions a").attr("href", "https://twitter.com/intent/tweet?hashtags=quotes&text=" + encodeURIComponent('"' + data.source + '"\n"' + data.translation + '"'));
+
     });
 });
 
