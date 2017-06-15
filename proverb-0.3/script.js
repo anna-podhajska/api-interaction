@@ -8,6 +8,9 @@ $(document).ready(function() {
      $('.pSource').html(data.source);
      $('.pTranslation').html(data.translation);
 
+  
+
+
     //  random background color:
      var newColor = pickRandomColor();
      $("body").css("background-color",newColor);
