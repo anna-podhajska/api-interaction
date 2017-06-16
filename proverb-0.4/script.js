@@ -25,7 +25,7 @@ function getProverb() {
 
               var encodedText =  encodeURI('"' + data.source + '" ' + data.translation);
 
-                $(this).attr("href", 'https://twitter.com/intent/tweet?text=' + encodedText);
+            $(this).attr("href", 'https://twitter.com/intent/tweet?text=' + encodedText);
 
                 //  random background color:
                 var newColor = pickRandomColor();
