@@ -1,6 +1,22 @@
+$(document).ready(function() {
+
+  // function mouseIn() {
+  //   $('.newProverb').css('font-size', '3rem');
+  // };
+  // function mouseOut() {
+  //   $('.newProverb').css('font-size', '');
+  // };
+  //
+  // $('.newProverb').mouseenter(mouseIn).mouseleave(mouseOut);
+
+  getProverb();
+});
+
+
+//on click
 function getProverb() {
 
-$(document).ready(function() {
+  $(document).ready(function() {
     $.ajax({
         url: "https://eda-te-reo.herokuapp.com/api/proverbs"
     }).then(function(data) {
@@ -8,22 +24,15 @@ $(document).ready(function() {
      $('.pSource').html(data.source);
      $('.pTranslation').html(data.translation);
 
-  
-
-
-    //  random background color:
+     //  random background color:
      var newColor = pickRandomColor();
      $("body").css("background-color",newColor);
-      $(".pSource").css("color",newColor);
+     $(".pSource").css("color",newColor);
     // -------
-
-    // update quote to twitter button like: "<quote>"<line feed>"<translation>"
-    $(".buttonActions a").attr("href", "https://twitter.com/intent/tweet?hashtags=quotes&text=" + encodeURIComponent('"' + data.source + '"\n"' + data.translation + '"'));
-
     });
-});
+  });
 
-}
+};
 
 
 //  random background color function:
@@ -35,7 +44,15 @@ function pickRandomColor() {
     "#666666",
     "#888888",
     "#999999",
-    "222222"
+    "#222222",
+    "#181818",
+    "#ce5a57",
+    "#57a5a3",
+    "#e1b16a",
+    "#777c76",
+    "#444c5c",
+    "#839aa4"
+
   ]
   var colorIndex = Math.floor(Math.random()*colors.length);
   return colors[colorIndex];
