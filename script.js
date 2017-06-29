@@ -28,6 +28,7 @@ function getProverb() {
      var newColor = pickRandomColor();
      $("body").css("background-color",newColor);
      $(".pSource").css("color",newColor);
+     $("footer").css("background-color",newColor);
     // -------
     });
   });
